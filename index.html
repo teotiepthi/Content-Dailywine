@@ -91,12 +91,7 @@
   <button class="tab-btn" onclick="switchTab('guide')">📖 Hướng Dẫn</button>
 </div>
 <div id="tab-create" class="tab-content active"><div class="main">
-<div style="display:flex;gap:8px">
-<input id="apiKeyInput" type="password" placeholder="Paste Anthropic API key (sk-ant-...)" style="flex:1;padding:9px 12px;border:1.5px solid rgba(117,36,43,0.2);border-radius:8px;font-size:13px;background:white;outline:none">
-<button onclick="(function(){var v=document.getElementById('apiKeyInput').value.trim();if(!v||v.includes('\u2022')){alert('Nhập key hợp lệ!');return;}localStorage.setItem('dw_api_key',v);document.getElementById('apiKeyInput').value='\u2022\u2022\u2022\u2022\u2022\u2022\u2022\u2022\u2022\u2022\u2022\u2022\u2022\u2022\u2022\u2022\u2022\u2022\u2022\u2022';document.getElementById('apiStatus').textContent='\u2705 \u0110\u00e3 k\u1ebft n\u1ed1i';document.getElementById('apiStatus').style.color='#27ae60';})()" style="padding:9px 16px;background:#75242B;color:white;border:none;border-radius:8px;font-size:12.5px;font-weight:600;cursor:pointer;white-space:nowrap">K&#7871;t n&#7889;i</button>
-</div>
-<div id="apiStatus" style="font-size:11px;margin-top:6px;color:#8a7060">&#9888;&#65039; Ch&#432;a k&#7871;t n&#7889;i</div>
-</div>
+
   <div class="card"><div class="card-title">Chọn sản phẩm</div><div class="country-tabs" id="countryTabs"></div><div class="product-grid" id="productGrid"></div></div>
   <div class="card"><div class="card-title">Thông tin bài viết</div>
     <div class="form-row">
