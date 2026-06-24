@@ -9,70 +9,70 @@
 :root{--burg:#75242B;--burg2:#5a1a20;--burg3:#8f3039;--org:#E4863C;--cream:#FDF8F3;--ink:#1e1209;--muted:#8a7060;--bdr:rgba(117,36,43,0.15)}
 *{margin:0;padding:0;box-sizing:border-box}
 body{font-family:'Inter',sans-serif;background:var(--cream);color:var(--ink);min-height:100vh}
-header{background:var(--burg);padding:18px 28px;display:flex;align-items:center;gap:14px;position:sticky;top:0;z-index:100;box-shadow:0 2px 16px rgba(0,0,0,0.25)}
+header{background:var(--burg);padding:18px 28px;display:flex;align-items:center;gap:14px;position:sticky;top:0;z-index:100;box-shadow:0 2px 16px rgba(0,0,0,.25)}
 .logo{width:42px;height:42px;background:var(--org);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Playfair Display',serif;font-size:18px;font-weight:700;color:white;flex-shrink:0}
 .htxt h1{font-family:'Playfair Display',serif;font-size:19px;font-weight:600;color:white}
-.htxt p{font-size:11px;color:rgba(255,255,255,0.6);font-style:italic}
+.htxt p{font-size:11px;color:rgba(255,255,255,.6);font-style:italic}
 .tabs{background:var(--burg2);display:flex;border-bottom:2px solid var(--org)}
-.tb{flex:1;padding:13px 6px;border:none;background:transparent;color:rgba(255,255,255,0.5);font-family:'Inter',sans-serif;font-size:12.5px;font-weight:500;cursor:pointer;transition:all .2s;border-bottom:3px solid transparent;margin-bottom:-2px}
-.tb.active{color:var(--org);border-bottom-color:var(--org);background:rgba(228,134,60,0.08)}
+.tb{flex:1;padding:13px 6px;border:none;background:transparent;color:rgba(255,255,255,.5);font-family:'Inter',sans-serif;font-size:12.5px;font-weight:500;cursor:pointer;transition:all .2s;border-bottom:3px solid transparent;margin-bottom:-2px}
+.tb.active{color:var(--org);border-bottom-color:var(--org);background:rgba(228,134,60,.08)}
 .tc{display:none}.tc.active{display:block}
 .main{max-width:820px;margin:0 auto;padding:24px 16px 60px}
-.card{background:white;border-radius:12px;padding:22px;margin-bottom:18px;border:1px solid var(--bdr);box-shadow:0 2px 10px rgba(117,36,43,0.05)}
-.ctitle{font-family:'Playfair Display',serif;font-size:16px;font-weight:600;color:var(--burg);margin-bottom:16px;display:flex;align-items:center;gap:8px}
-.ctitle::before{content:'';display:block;width:3px;height:18px;background:var(--org);border-radius:2px}
+.card{background:white;border-radius:12px;padding:22px;margin-bottom:18px;border:1px solid var(--bdr);box-shadow:0 2px 10px rgba(117,36,43,.05)}
+.ct{font-family:'Playfair Display',serif;font-size:16px;font-weight:600;color:var(--burg);margin-bottom:16px;display:flex;align-items:center;gap:8px}
+.ct::before{content:'';display:block;width:3px;height:18px;background:var(--org);border-radius:2px}
 .fr{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:14px}
 .fr.s{grid-template-columns:1fr}.fr.t{grid-template-columns:1fr 1fr 1fr}
 .fg{display:flex;flex-direction:column;gap:5px}
 label{font-size:11px;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:.7px}
 select,input,textarea{font-family:'Inter',sans-serif;font-size:13.5px;padding:9px 12px;border:1.5px solid var(--bdr);border-radius:8px;background:var(--cream);color:var(--ink);transition:border-color .2s,box-shadow .2s;outline:none;width:100%}
-select:focus,input:focus,textarea:focus{border-color:var(--org);box-shadow:0 0 0 3px rgba(228,134,60,0.1);background:white}
+select:focus,input:focus,textarea:focus{border-color:var(--org);box-shadow:0 0 0 3px rgba(228,134,60,.1);background:white}
 textarea{resize:vertical;min-height:72px;line-height:1.5}
-.pgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(130px,1fr));gap:8px;margin-top:6px}
-.pchip{padding:7px 10px;border:1.5px solid var(--bdr);border-radius:7px;background:var(--cream);font-size:12px;cursor:pointer;transition:all .2s;text-align:center;color:var(--ink);line-height:1.3}
-.pchip:hover{border-color:var(--org);background:#fff8f3}
-.pchip.sel{border-color:var(--burg);background:var(--burg);color:white;font-weight:500}
+.pg{display:grid;grid-template-columns:repeat(auto-fill,minmax(130px,1fr));gap:8px;margin-top:6px}
+.pc{padding:7px 10px;border:1.5px solid var(--bdr);border-radius:7px;background:var(--cream);font-size:12px;cursor:pointer;transition:all .2s;text-align:center;color:var(--ink);line-height:1.3}
+.pc:hover{border-color:var(--org);background:#fff8f3}
+.pc.sel{border-color:var(--burg);background:var(--burg);color:white;font-weight:500}
 .ctabs{display:flex;flex-wrap:wrap;gap:7px;margin-bottom:12px}
 .ctb{padding:5px 12px;border:1.5px solid var(--bdr);border-radius:18px;background:var(--cream);font-size:11.5px;font-weight:500;cursor:pointer;transition:all .2s;color:var(--muted)}
 .ctb:hover{border-color:var(--org);color:var(--ink)}
 .ctb.active{background:var(--burg);color:white;border-color:var(--burg)}
-.btn-gen{width:100%;padding:15px;background:linear-gradient(135deg,var(--burg) 0%,var(--burg3) 100%);color:white;border:none;border-radius:10px;font-family:'Playfair Display',serif;font-size:16px;font-weight:600;cursor:pointer;transition:all .25s;letter-spacing:.3px}
-.btn-gen:hover{transform:translateY(-1px);box-shadow:0 6px 18px rgba(117,36,43,0.3)}
-.btn-gen:disabled{opacity:.6;cursor:not-allowed;transform:none}
-.brow{display:flex;gap:9px;margin-top:11px}
-.bsec{flex:1;padding:10px;border:1.5px solid var(--bdr);border-radius:8px;background:white;font-size:12.5px;font-weight:500;cursor:pointer;color:var(--ink);transition:all .2s}
-.bsec:hover{border-color:var(--org);background:var(--cream)}
-.bsav{flex:1;padding:10px;border:1.5px solid var(--burg);border-radius:8px;background:white;font-size:12.5px;font-weight:500;cursor:pointer;color:var(--burg);transition:all .2s}
-.bsav:hover{background:var(--burg);color:white}
-.obox{background:var(--cream);border:1.5px solid var(--bdr);border-radius:10px;padding:18px;min-height:120px;white-space:pre-wrap;font-family:'Lora',serif;font-size:14.5px;line-height:1.75;color:var(--ink)}
-.obox .ph{color:var(--muted);font-style:italic;font-family:'Inter',sans-serif;font-size:13.5px}
-.loading::after{content:'';animation:dots 1.2s steps(3,end) infinite}
+.bg{width:100%;padding:15px;background:linear-gradient(135deg,var(--burg),var(--burg3));color:white;border:none;border-radius:10px;font-family:'Playfair Display',serif;font-size:16px;font-weight:600;cursor:pointer;transition:all .25s;letter-spacing:.3px}
+.bg:hover{transform:translateY(-1px);box-shadow:0 6px 18px rgba(117,36,43,.3)}
+.bg:disabled{opacity:.6;cursor:not-allowed;transform:none}
+.br{display:flex;gap:9px;margin-top:11px}
+.bs{flex:1;padding:10px;border:1.5px solid var(--bdr);border-radius:8px;background:white;font-size:12.5px;font-weight:500;cursor:pointer;color:var(--ink);transition:all .2s}
+.bs:hover{border-color:var(--org);background:var(--cream)}
+.bv{flex:1;padding:10px;border:1.5px solid var(--burg);border-radius:8px;background:white;font-size:12.5px;font-weight:500;cursor:pointer;color:var(--burg);transition:all .2s}
+.bv:hover{background:var(--burg);color:white}
+.ob{background:var(--cream);border:1.5px solid var(--bdr);border-radius:10px;padding:18px;min-height:120px;white-space:pre-wrap;font-family:'Lora',serif;font-size:14.5px;line-height:1.75;color:var(--ink)}
+.ph{color:var(--muted);font-style:italic;font-family:'Inter',sans-serif;font-size:13.5px}
+.ld::after{content:'';animation:dots 1.2s steps(3,end) infinite}
 @keyframes dots{0%{content:'.'}33%{content:'..'}66%,100%{content:'...'}}
 .cc{text-align:right;font-size:11px;color:var(--muted);margin-top:5px}
 .si{background:white;border:1px solid var(--bdr);border-radius:10px;padding:14px;margin-bottom:10px}
 .sm{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px}
-.stag{font-size:10.5px;font-weight:600;color:var(--burg);background:rgba(117,36,43,0.08);padding:3px 9px;border-radius:10px;text-transform:uppercase;letter-spacing:.5px}
-.sdate{font-size:10.5px;color:var(--muted)}
-.stxt{font-family:'Lora',serif;font-size:13.5px;line-height:1.6;color:var(--ink);white-space:pre-wrap}
-.sact{display:flex;gap:7px;margin-top:9px}
+.stag{font-size:10.5px;font-weight:600;color:var(--burg);background:rgba(117,36,43,.08);padding:3px 9px;border-radius:10px;text-transform:uppercase;letter-spacing:.5px}
+.sd{font-size:10.5px;color:var(--muted)}
+.st{font-family:'Lora',serif;font-size:13.5px;line-height:1.6;color:var(--ink);white-space:pre-wrap}
+.sa{display:flex;gap:7px;margin-top:9px}
 .bi{padding:5px 12px;border:1.5px solid var(--bdr);border-radius:6px;background:var(--cream);font-size:11.5px;cursor:pointer;color:var(--muted);transition:all .2s}
 .bi:hover{border-color:var(--org);color:var(--ink)}
 .bi.d:hover{border-color:#c0392b;color:#c0392b}
-.cgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:18px}
-.ccard{background:white;border:1px solid var(--bdr);border-radius:10px;padding:14px;text-align:center}
-.clet{width:34px;height:34px;background:var(--burg);color:white;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Playfair Display',serif;font-size:15px;font-weight:700;margin:0 auto 7px}
-.cwrd{font-size:11.5px;font-weight:600;color:var(--burg);margin-bottom:3px}
-.cdsc{font-size:10.5px;color:var(--muted);line-height:1.4}
+.cg{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:18px}
+.cc2{background:white;border:1px solid var(--bdr);border-radius:10px;padding:14px;text-align:center}
+.cl{width:34px;height:34px;background:var(--burg);color:white;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Playfair Display',serif;font-size:15px;font-weight:700;margin:0 auto 7px}
+.cw{font-size:11.5px;font-weight:600;color:var(--burg);margin-bottom:3px}
+.cd{font-size:10.5px;color:var(--muted);line-height:1.4}
 .gs{margin-bottom:22px}
 .gs h3{font-family:'Playfair Display',serif;font-size:15px;color:var(--burg);margin-bottom:9px;padding-bottom:6px;border-bottom:1px solid var(--bdr)}
 .gs p,.gs li{font-size:13.5px;line-height:1.7;color:#4a3728;margin-bottom:5px}
 .gs ul{padding-left:16px}
-.tip{background:rgba(228,134,60,0.08);border-left:3px solid var(--org);padding:11px 14px;border-radius:0 8px 8px 0;margin:9px 0;font-size:13px;line-height:1.6;color:var(--ink)}
-.toast{position:fixed;bottom:22px;left:50%;transform:translateX(-50%) translateY(80px);background:var(--burg);color:white;padding:11px 22px;border-radius:28px;font-size:13.5px;font-weight:500;transition:transform .3s cubic-bezier(.34,1.56,.64,1);z-index:9999;box-shadow:0 4px 18px rgba(0,0,0,0.22);opacity:0}
+.tip{background:rgba(228,134,60,.08);border-left:3px solid var(--org);padding:11px 14px;border-radius:0 8px 8px 0;margin:9px 0;font-size:13px;line-height:1.6;color:var(--ink)}
+.toast{position:fixed;bottom:22px;left:50%;transform:translateX(-50%) translateY(80px);background:var(--burg);color:white;padding:11px 22px;border-radius:28px;font-size:13.5px;font-weight:500;transition:transform .3s cubic-bezier(.34,1.56,.64,1);z-index:9999;box-shadow:0 4px 18px rgba(0,0,0,.22);opacity:0}
 .toast.show{transform:translateX(-50%) translateY(0);opacity:1}
 .empty{text-align:center;padding:44px 20px;color:var(--muted)}
 .empty .ic{font-size:36px;margin-bottom:10px}
-@media(max-width:600px){.fr{grid-template-columns:1fr}.fr.t{grid-template-columns:1fr 1fr}.cgrid{grid-template-columns:repeat(2,1fr)}.main{padding:14px 12px 60px}}
+@media(max-width:600px){.fr{grid-template-columns:1fr}.fr.t{grid-template-columns:1fr 1fr}.cg{grid-template-columns:repeat(2,1fr)}.main{padding:14px 12px 60px}}
 </style>
 </head>
 <body>
@@ -81,21 +81,19 @@ textarea{resize:vertical;min-height:72px;line-height:1.5}
   <div class="htxt"><h1>Daily Wine</h1><p>Caption Generator — Công cụ tạo nội dung</p></div>
 </header>
 <div class="tabs">
-  <button class="tb active" onclick="swTab('create',this)">✍️ Tạo Caption</button>
-  <button class="tb" onclick="swTab('lifestyle',this)">🍷 Lifestyle</button>
-  <button class="tb" onclick="swTab('saved',this)">💾 Đã Lưu</button>
-  <button class="tb" onclick="swTab('guide',this)">📖 Hướng Dẫn</button>
+  <button class="tb active" onclick="sw('create',this)">✍️ Tạo Caption</button>
+  <button class="tb" onclick="sw('lifestyle',this)">🍷 Lifestyle</button>
+  <button class="tb" onclick="sw('saved',this)">💾 Đã Lưu</button>
+  <button class="tb" onclick="sw('guide',this)">📖 Hướng Dẫn</button>
 </div>
-
-<!-- TAB 1 -->
 <div id="tab-create" class="tc active"><div class="main">
   <div class="card">
-    <div class="ctitle">Chọn sản phẩm</div>
+    <div class="ct">Chọn sản phẩm</div>
     <div class="ctabs" id="ctabs"></div>
-    <div class="pgrid" id="pgrid"></div>
+    <div class="pg" id="pgrid"></div>
   </div>
   <div class="card">
-    <div class="ctitle">Thông tin bài viết</div>
+    <div class="ct">Thông tin bài viết</div>
     <div class="fr">
       <div class="fg"><label>Mục tiêu bài viết</label>
         <select id="goal"><option value="awareness">Tăng nhận diện thương hiệu</option><option value="engagement">Tương tác & kết nối</option><option value="sale">Thúc đẩy mua hàng</option><option value="education">Giáo dục khách hàng</option><option value="event">Sự kiện / Dịp đặc biệt</option></select>
@@ -116,37 +114,35 @@ textarea{resize:vertical;min-height:72px;line-height:1.5}
       </div>
     </div>
     <div class="fr s"><div class="fg"><label>Ghi chú thêm (tuỳ chọn)</label>
-      <textarea id="note" placeholder="VD: dịp Valentine, quá tặng cặp đôi..."></textarea>
+      <textarea id="note" placeholder="VD: dịp Valentine, quà tặng cặp đôi..."></textarea>
     </div></div>
   </div>
-  <button class="btn-gen" onclick="genCaption()" id="genBtn">🪄 Tạo Caption ngay</button>
+  <button class="bg" onclick="gen()" id="genBtn">🪄 Tạo Caption ngay</button>
   <div class="card" style="margin-top:18px">
-    <div class="ctitle">Kết quả</div>
-    <div class="obox" id="obox"><span class="ph">Caption sẽ xuất hiện ở đây sau khi bạn nhấn "Tạo Caption" ✨</span></div>
-    <div class="cc" id="cc"></div>
-    <div class="brow">
-      <button class="bsec" onclick="copyOut()">📋 Sao chép</button>
-      <button class="bsec" onclick="genCaption()">🔄 Tạo lại</button>
-      <button class="bsav" onclick="saveOut()">💾 Lưu lại</button>
+    <div class="ct">Kết quả</div>
+    <div class="ob" id="obox"><span class="ph">Caption sẽ xuất hiện ở đây ✨</span></div>
+    <div class="cc" id="cc2"></div>
+    <div class="br">
+      <button class="bs" onclick="cpO()">📋 Sao chép</button>
+      <button class="bs" onclick="gen()">🔄 Tạo lại</button>
+      <button class="bv" onclick="svO()">💾 Lưu lại</button>
     </div>
   </div>
 </div></div>
-
-<!-- TAB 2 -->
 <div id="tab-lifestyle" class="tc"><div class="main">
   <div class="card">
-    <div class="ctitle">Framework C.R.E.A.T.E</div>
-    <div class="cgrid">
-      <div class="ccard"><div class="clet">C</div><div class="cwrd">Context</div><div class="cdsc">Bối cảnh, thời điểm</div></div>
-      <div class="ccard"><div class="clet">R</div><div class="cwrd">Relatable</div><div class="cdsc">Tình huống gần gũi</div></div>
-      <div class="ccard"><div class="clet">E</div><div class="cwrd">Emotion</div><div class="cdsc">Cảm xúc chủ đạo</div></div>
-      <div class="ccard"><div class="clet">A</div><div class="cwrd">Action</div><div class="cdsc">Hành động với rượu</div></div>
-      <div class="ccard"><div class="clet">T</div><div class="cwrd">Twist</div><div class="cdsc">Chi tiết bất ngờ</div></div>
-      <div class="ccard"><div class="clet">E</div><div class="cwrd">Engage</div><div class="cdsc">Mời tương tác</div></div>
+    <div class="ct">Framework C.R.E.A.T.E</div>
+    <div class="cg">
+      <div class="cc2"><div class="cl">C</div><div class="cw">Context</div><div class="cd">Bối cảnh, thời điểm</div></div>
+      <div class="cc2"><div class="cl">R</div><div class="cw">Relatable</div><div class="cd">Tình huống gần gũi</div></div>
+      <div class="cc2"><div class="cl">E</div><div class="cw">Emotion</div><div class="cd">Cảm xúc chủ đạo</div></div>
+      <div class="cc2"><div class="cl">A</div><div class="cw">Action</div><div class="cd">Hành động với rượu</div></div>
+      <div class="cc2"><div class="cl">T</div><div class="cw">Twist</div><div class="cd">Chi tiết bất ngờ</div></div>
+      <div class="cc2"><div class="cl">E</div><div class="cw">Engage</div><div class="cd">Mời tương tác</div></div>
     </div>
   </div>
   <div class="card">
-    <div class="ctitle">Tạo Caption Lifestyle</div>
+    <div class="ct">Tạo Caption Lifestyle</div>
     <div class="fr">
       <div class="fg"><label>Dịp / Bối cảnh</label>
         <select id="lsocc"><option value="dinner">Bữa tối lãng mạn</option><option value="friends">Tụ họp bạn bè</option><option value="weekend">Thư giãn cuối tuần</option><option value="gift">Quà tặng ý nghĩa</option><option value="achievement">Kỷ niệm thành công</option><option value="travel">Hành trình khám phá</option><option value="self">Me time</option></select>
@@ -158,99 +154,79 @@ textarea{resize:vertical;min-height:72px;line-height:1.5}
     <div class="fr s"><div class="fg"><label>Sản phẩm lồng ghép (tuỳ chọn)</label>
       <input type="text" id="lsprod" placeholder="VD: San Simone Prosecco, hoặc để trống">
     </div></div>
-    <button class="btn-gen" onclick="genLs()">🍷 Tạo Caption Lifestyle</button>
+    <button class="bg" onclick="genL()">🍷 Tạo Caption Lifestyle</button>
     <div style="margin-top:14px">
-      <div class="obox" id="lsbox"><span class="ph">Caption lifestyle sẽ xuất hiện ở đây ✨</span></div>
-      <div class="brow">
-        <button class="bsec" onclick="copyLs()">📋 Sao chép</button>
-        <button class="bsav" onclick="saveLs()">💾 Lưu lại</button>
+      <div class="ob" id="lsbox"><span class="ph">Caption lifestyle sẽ xuất hiện ở đây ✨</span></div>
+      <div class="br">
+        <button class="bs" onclick="cpL()">📋 Sao chép</button>
+        <button class="bv" onclick="svL()">💾 Lưu lại</button>
       </div>
     </div>
   </div>
 </div></div>
-
-<!-- TAB 3 -->
 <div id="tab-saved" class="tc"><div class="main">
   <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px">
     <h2 style="font-family:'Playfair Display',serif;font-size:19px;color:var(--burg)">Caption đã lưu</h2>
-    <button class="bi d" onclick="clearAll()">🗑️ Xoá tất cả</button>
+    <button class="bi d" onclick="clrAll()">🗑️ Xoá tất cả</button>
   </div>
   <div id="slist"></div>
 </div></div>
-
-<!-- TAB 4 -->
 <div id="tab-guide" class="tc"><div class="main">
-  <div class="gs"><h3>🎯 Cách sử dụng</h3><p>Chọn sản phẩm → điền thông tin → bấm "Tạo Caption". Tool tự động kết nối API, không cần cấu hình gì thêm.</p><div class="tip">💡 Thêm ghi chú cụ thể (dịp lễ, đối tượng KH) để caption ra đúng ý hơn!</div></div>
+  <div class="gs"><h3>🎯 Cách sử dụng</h3><p>Chọn sản phẩm → điền thông tin → bấm "Tạo Caption". Tool tự động kết nối, không cần cấu hình gì thêm.</p><div class="tip">💡 Thêm ghi chú cụ thể (dịp lễ, đối tượng KH) để caption ra đúng ý hơn!</div></div>
   <div class="gs"><h3>🍷 Sản phẩm Daily Wine</h3><ul><li><strong>San Simone Prosecco</strong> — Champagne Ý, bong bóng nhẹ</li><li><strong>Papale Primitivo</strong> — Vang đỏ đậm Puglia, hậu vị dài</li><li><strong>Aussie Legacy 1868 Shiraz</strong> — Shiraz Úc mượt mà, dễ uống</li></ul></div>
-  <div class="gs"><h3>📝 Quy tắc váng</h3><ul><li>Bán <em>trải nghiệm</em>, không bán rượu trực tiếp</li><li>Dùng ngôn ngữ <em>cảm giác</em>, không kỹ thuật</li><li>Luôn có call-to-action cuối bài</li></ul><div class="tip">🍾 Formula: Bối cảnh → Cảm xúc → Sản phẩm → CTA</div></div>
+  <div class="gs"><h3>📝 Quy tắc vàng</h3><ul><li>Bán <em>trải nghiệm</em>, không bán rượu trực tiếp</li><li>Dùng ngôn ngữ <em>cảm giác</em>, không kỹ thuật</li><li>Luôn có call-to-action cuối bài</li></ul><div class="tip">🍾 Formula: Bối cảnh → Cảm xúc → Sản phẩm → CTA</div></div>
   <div class="gs"><h3>⚡ Phím tắt</h3><ul><li><strong>Ctrl+Enter</strong> — Tạo caption nhanh</li></ul></div>
 </div></div>
-
 <div class="toast" id="toast"></div>
-
 <script>
 const P={"🇮🇹 Ý":["San Simone Prosecco DOC","Papale Primitivo di Manduria","Papale Oro Primitivo","Tenuta Ulisse Pecorino","Villa Antinori Rosso"],"🇫🇷 Pháp":["Chateau Roubine Rose","Louis Jadot Macon-Villages","Cotes du Rhone Rouge","Bordeaux Superieur","Muscadet Sevre et Maine"],"🇦🇺 Úc":["Aussie Legacy 1868 Shiraz","Penfolds Koonunga Hill","Wolf Blass Yellow Label","Hardys Stamp Shiraz","Jacob's Creek Chardonnay"],"🇪🇸 TBN":["Campo Viejo Rioja Reserva","Marques de Riscal Rioja","Alamos Malbec","Torres Sangre de Toro","Protos Ribera del Duero"],"🇺🇸 Mỹ":["Apothic Red Blend","Ménage à Trois Silk","Josh Cellars Cabernet","Meiomi Pinot Noir","Bogle Phantom Red"],"🇨🇱 Chile":["Concha y Toro Casillero Diablo","Santa Rita 120 Cabernet","Montes Alpha Merlot","Viu Manent Malbec","Santa Carolina Reserva"],"🇦🇷 AR":["Achaval Ferrer Malbec","Catena Zapata Adrianna","Zuccardi Valle de Uco","Clos de los Siete","Renacer Punto Final"],"🇳🇿 NZ":["Cloudy Bay Sauvignon Blanc","Kim Crawford Sauvignon","Villa Maria Pinot Noir","Palliser Estate Riesling","Greywacke Wild Sauvignon"]};
 const K=atob(['c2stYW50LWFwaTAzLXVGMG1xU0dCamVpQkpRaHNqNHFGZzR5ZEJUOUZxUW1LTi11YkZYT3RGd3pmOHpf','eFJFX0F3dmg1N0cxWWpJbFRDcHpsel','RfWEFJcWU2OVNVaWtyTVh3LVlQYlMzQUFB'].join(''));
-let sC=Object.keys(P)[0],sP='',curO='',curL='';
-
+let sC=Object.keys(P)[0],sP='',cO='',cL='';
 function init(){rC();rP();rS();}
 function rC(){document.getElementById('ctabs').innerHTML=Object.keys(P).map(c=>`<button class="ctb ${c===sC?'active':''}" onclick="selC('${c}')">${c}</button>`).join('');}
 function selC(c){sC=c;sP='';rC();rP();}
-function rP(){document.getElementById('pgrid').innerHTML=(P[sC]||[]).map(p=>`<div class="pchip ${p===sP?'sel':''}" onclick="selP('${p}')">${p}</div>`).join('');}
+function rP(){document.getElementById('pgrid').innerHTML=(P[sC]||[]).map(p=>`<div class="pc ${p===sP?'sel':''}" onclick="selP('${p}')">${p}</div>`).join('');}
 function selP(p){sP=sP===p?'':p;rP();}
-function swTab(id,btn){document.querySelectorAll('.tc').forEach(t=>t.classList.remove('active'));document.querySelectorAll('.tb').forEach(b=>b.classList.remove('active'));document.getElementById('tab-'+id).classList.add('active');btn.classList.add('active');if(id==='saved')rS();}
-
-function strip(s){return(s||'').replace(/\*\*([\s\S]*?)\*\*/g,'$1').replace(/\*([\s\S]*?)\*/g,'$1').replace(/^#{1,6}\s+/gm,'').trim();}
-
-async function callAPI(prompt,max){
-  const res=await fetch('https://api.anthropic.com/v1/messages',{method:'POST',headers:{'Content-Type':'application/json','x-api-key':K,'anthropic-version':'2023-06-01'},body:JSON.stringify({model:'claude-sonnet-4-6',max_tokens:max||1500,messages:[{role:'user',content:prompt}]})});
-  if(!res.ok){const e=await res.json();throw new Error(e.error?.message||'HTTP '+res.status);}
-  const d=await res.json();return d.content?.[0]?.text||'';
+function sw(id,btn){document.querySelectorAll('.tc').forEach(t=>t.classList.remove('active'));document.querySelectorAll('.tb').forEach(b=>b.classList.remove('active'));document.getElementById('tab-'+id).classList.add('active');btn.classList.add('active');if(id==='saved')rS();}
+function strip(s){return(s||'').replace(/**([sS]*?)**/g,'$1').replace(/*([sS]*?)*/g,'$1').replace(/^#{1,6}s+/gm,'').trim();}
+async function api(prompt,max){
+  const r=await fetch('https://api.anthropic.com/v1/messages',{method:'POST',headers:{'Content-Type':'application/json','x-api-key':K,'anthropic-version':'2023-06-01'},body:JSON.stringify({model:'claude-sonnet-4-6',max_tokens:max||1500,messages:[{role:'user',content:prompt}]})});
+  if(!r.ok){const e=await r.json();throw new Error(e.error?.message||'HTTP '+r.status);}
+  return (await r.json()).content?.[0]?.text||'';
 }
-
-async function genCaption(){
-  const goal=document.getElementById('goal').value,tone=document.getElementById('tone').value,plat=document.getElementById('plat').value,len=document.getElementById('len').value,cnt=document.getElementById('cnt').value,note=document.getElementById('note').value,prod=sP||'sản phẩm rượu Daily Wine';
+async function gen(){
+  const g=document.getElementById('goal').value,t=document.getElementById('tone').value,pl=document.getElementById('plat').value,l=document.getElementById('len').value,c=document.getElementById('cnt').value,n=document.getElementById('note').value,pr=sP||'sản phẩm rượu Daily Wine';
   const lM={short:'50-100 từ',medium:'100-200 từ',long:'200-350 từ'};
   const tM={warm:'ấm áp, gần gũi',premium:'sang trọng, premium',fun:'vui vẻ, năng động',expert:'chuyên gia, uy tín',story:'kể chuyện, cảm xúc'};
   const gM={awareness:'tăng nhận diện thương hiệu',engagement:'tăng tương tác & kết nối',sale:'thúc đẩy mua hàng',education:'giáo dục kiến thức rượu',event:'quảng bá sự kiện/dịp đặc biệt'};
   const pM={facebook:'Facebook',instagram:'Instagram (kèm 5-8 hashtag)',tiktok:'TikTok (hook mạnh, ngắn gọn)',zalo:'Zalo (thân thiện, personal)'};
-  const prompt=`Bạn là chuyên gia copywriting cho thương hiệu rượu Daily Wine Việt Nam.\n\nViết ${cnt} caption (đánh số 1., 2., 3.) với:\n- Sản phẩm: ${prod}\n- Mục tiêu: ${gM[goal]}\n- Tone: ${tM[tone]}\n- Nền tảng: ${pM[plat]}\n- Độ dài: ${lM[len]}\n${note?'- Yêu cầu thêm: '+note:''}\n\nQuy tắc:\n- KHÔNG nói thẳng "uống rượu", tập trung vào trải nghiệm\n- Cuối mỗi caption có CTA tự nhiên\n- Viết Tiếng Việt tự nhiên, có thể dùng emoji\n\nChỉ xuất caption, không giải thích.`;
+  const p=`Bạn là chuyên gia copywriting cho thương hiệu rượu Daily Wine Việt Nam.\n\nViết ${c} caption (đánh số 1., 2., 3.) với:\n- Sản phẩm: ${pr}\n- Mục tiêu: ${gM[g]}\n- Tone: ${tM[t]}\n- Nền tảng: ${pM[pl]}\n- Độ dài: ${lM[l]}\n${n?'- Yêu cầu thêm: '+n:''}\n\nQuy tắc:\n- KHÔNG nói thẳng "uống rượu", tập trung vào trải nghiệm\n- Cuối mỗi caption có CTA tự nhiên\n- Viết Tiếng Việt tự nhiên\n\nChỉ xuất caption, không giải thích.`;
   setL(true,'genBtn','obox');
-  try{curO=strip(await callAPI(prompt));document.getElementById('obox').textContent=curO;document.getElementById('cc').textContent=curO.length+' ký tự';}
+  try{cO=strip(await api(p));document.getElementById('obox').textContent=cO;document.getElementById('cc2').textContent=cO.length+' ký tự';}
   catch(e){document.getElementById('obox').textContent='❌ Lỗi: '+e.message;}
   setL(false,'genBtn','obox');
 }
-
-async function genLs(){
-  const oM={dinner:'b��ua tối lãng mạn',friends:'wụ họp bạn bè',weekend:'thư giãn cuối tuần',gift:'wặng quà ý nghĩa',achievement:'kỷ niệm thành công',travel:'hành trình khám phá',self:'me time'};
-  const eM={romantic:'lãng mạn, ấm áp',joyful:'vui vẻ, phấn khởi',nostalgic:'hoài niệm, sâu lắng',luxurious:'sang trọng, tự háo',cozy:'bình yên, thư giãn'};
-  const occ=document.getElementById('lsocc').value,emo=document.getElementById('lsemo').value,prod=document.getElementById('lsprod').value;
-  const prompt=`Bạn là content creator lifestyle cao cấp.\nViết 1 caption lifestyle theo C.R.E.A.T.E:\n- Bối cảnh: ${oM[occ]}\n- Cảm xúc: ${eM[emo]}\n${prod?'- Lồng ghép tự nhiên: '+prod:'- Chi để goi ý mot ly rượu hoac wine, không đề cấp brand'}\nPhong cách: tinh tế, như người sống chất lượng cao tự viết.\nℐộ dài: 150-250 từ. Có emoji & hashtag cuối bài. Viết Tiếng Việt.`;
+async function genL(){
+  const oM={dinner:'bữa tối lãng mạn',friends:'tụ họp bạn bè',weekend:'thư giãn cuối tuần',gift:'tặng quà ý nghĩa',achievement:'kỷ niệm thành công',travel:'hành trình khám phá',self:'me time'};
+  const eM={romantic:'lãng mạn, ấm áp',joyful:'vui vẻ, phấn khởi',nostalgic:'hoài niệm, sâu lắng',luxurious:'sang trọng, tự hào',cozy:'bình yên, thư giãn'};
+  const oc=document.getElementById('lsocc').value,em=document.getElementById('lsemo').value,pr=document.getElementById('lsprod').value;
+  const p=`Bạn là content creator lifestyle cao cấp.\nViết 1 caption lifestyle theo C.R.E.A.T.E:\n- Bối cảnh: ${oM[oc]}\n- Cảm xúc: ${eM[em]}\n${pr?'- Lồng ghép tự nhiên: '+pr:'- Chỉ gợi ý "một ly rượu" hoặc wine, không đề cập brand'}\nPhong cách: tinh tế, như người sống chất lượng cao tự viết.\nĐộ dài: 150-250 từ. Có emoji & hashtag cuối bài. Viết Tiếng Việt.`;
   setL(true,null,'lsbox');
-  try{curL=strip(await callAPI(prompt,800));document.getElementById('lsbox').textContent=curL;}
+  try{cL=strip(await api(p,800));document.getElementById('lsbox').textContent=cL;}
   catch(e){document.getElementById('lsbox').textContent='❌ Lỗi: '+e.message;}
   setL(false,null,'lsbox');
 }
-
-function setL(on,btnId,boxId){
-  const box=document.getElementById(boxId);
-  if(on){box.innerHTML='<span class="loading">Đang tạo caption</span>';if(btnId)document.getElementById(btnId).disabled=true;}
-  else{if(btnId)document.getElementById(btnId).disabled=false;}
-}
-function copyOut(){if(curO)navigator.clipboard.writeText(curO).then(()=>toast('✅ Đã sao chép!'));}
-function copyLs(){if(curL)navigator.clipboard.writeText(curL).then(()=>toast('✅ Đã sao chép!'));}
-function saveOut(){if(!curO)return;save(curO,sP||'Daily Wine');toast('💾 Đã lưu!');}
-function saveLs(){if(!curL)return;save(curL,'Lifestyle');toast('💾 Đã lưu!');}
-function save(text,label){const s=JSON.parse(localStorage.getItem('dw')||'[]');s.unshift({id:Date.now(),text,label,date:new Date().toLocaleDateString('vi-VN')});if(s.length>50)s.pop();localStorage.setItem('dw',JSON.stringify(s));}
-function rS(){
-  const s=JSON.parse(localStorage.getItem('dw')||'[]'),el=document.getElementById('slist');
-  if(!s.length){el.innerHTML='<div class="empty"><div class="ic">📭</div><p>Chbưa có caption nào.<br>Tạo và bấm "Lưu lại" để lưu.</p></div>',return;}
-  el.innerHTML=s.map(x=>`<div class="si"><div class="sm"><span class="stag">${x.label}</span><span class="sdate">${x.date}</span></div><div class="stxt">${x.text}</div><div class="sact"><button class="bi" onclick="navigator.clipboard.writeText(this.closest('.si').querySelector('ostxt').textContent).then(()=>toast('✅ Đã sao chép!'))">📋 Sao chép</button><button class="bi d" onclick="del(${x.id})">🗑️ Xoá</button></div></div>`).join('');
-}
-function del(id){let s=JSON.parse(localStorage.getItem('dw')||'[]');s=s.filter(x=>x.id!==id);localStorage.setItem('dw',JSON.stringify(s));rS();toast('🗑️ Đã xoá');}
-function clearAll(){if(!confirm('Xoá tất cả?'))return;localStorage.removeItem('dw');rS();toast('🗑️ Đã xoá tất cả');}
-function toast(msg){const t=document.getElementById('toast');t.textContent=msg;t.classList.add('show');setTimeout(()=>t.classList.remove('show'),2500);}
-document.addEventListener('keydown',e=>{if(e.ctrlKey&&e.key==='Enter')genCaption();});
+function setL(on,btn,box){const b=document.getElementById(box);if(on){b.innerHTML='<span class="ld">Đang tạo caption</span>';if(btn)document.getElementById(btn).disabled=true;}else{if(btn)document.getElementById(btn).disabled=false;}}
+function cpO(){if(cO)navigator.clipboard.writeText(cO).then(()=>toast('✅ Đã sao chép!'));}
+function cpL(){if(cL)navigator.clipboard.writeText(cL).then(()=>toast('✅ Đã sao chép!'));}
+function svO(){if(!cO)return;sv(cO,sP||'Daily Wine');toast('💾 Đã lưu!');}
+function svL(){if(!cL)return;sv(cL,'Lifestyle');toast('💾 Đã lưu!');}
+function sv(tx,lb){const s=JSON.parse(localStorage.getItem('dw')||'[]');s.unshift({id:Date.now(),tx,lb,dt:new Date().toLocaleDateString('vi-VN')});if(s.length>50)s.pop();localStorage.setItem('dw',JSON.stringify(s));}
+function rS(){const s=JSON.parse(localStorage.getItem('dw')||'[]'),el=document.getElementById('slist');if(!s.length){el.innerHTML='<div class="empty"><div class="ic">📭</div><p>Chưa có caption nào.<br>Tạo và bấm "Lưu lại" để lưu.</p></div>';return;}el.innerHTML=s.map(x=>`<div class="si"><div class="sm"><span class="stag">${x.lb}</span><span class="sd">${x.dt}</span></div><div class="st">${x.tx}</div><div class="sa"><button class="bi" onclick="navigator.clipboard.writeText(this.closest('.si').querySelector('.st').textContent).then(()=>toast('✅ Đã sao chép!'))">📋 Sao chép</button><button class="bi d" onclick="dl(${x.id})">🗑️ Xoá</button></div></div>`).join('');}
+function dl(id){let s=JSON.parse(localStorage.getItem('dw')||'[]');s=s.filter(x=>x.id!==id);localStorage.setItem('dw',JSON.stringify(s));rS();toast('🗑️ Đã xoá');}
+function clrAll(){if(!confirm('Xoá tất cả?'))return;localStorage.removeItem('dw');rS();toast('🗑️ Đã xoá tất cả');}
+function toast(m){const t=document.getElementById('toast');t.textContent=m;t.classList.add('show');setTimeout(()=>t.classList.remove('show'),2500);}
+document.addEventListener('keydown',e=>{if(e.ctrlKey&&e.key==='Enter')gen();});
 init();
 </script>
 </body>
