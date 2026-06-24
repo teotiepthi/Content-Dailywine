@@ -186,6 +186,8 @@ function deleteSaved(id){let saved=JSON.parse(localStorage.getItem('dw_captions'
 function clearAllSaved(){if(!confirm('Xoá tất cả caption đã lưu?'))return;localStorage.removeItem('dw_captions');renderSavedList();showToast('🗑️ Đã xoá tất cả')}
 function showToast(msg){const t=document.getElementById('toast');t.textContent=msg;t.classList.add('show');setTimeout(()=>t.classList.remove('show'),2500)}
 document.addEventListener('keydown',e=>{if(e.ctrlKey&&e.key==='Enter')generateCaption()});
+
+function stripMd(s){return(s||'').replace(/\*\*([\s\S]*?)\*\*/g,'$1').replace(/\*([\s\S]*?)\*/g,'$1').replace(/^#{1,6}\s+/gm,'');}
 init();
 </script>
 </body>
