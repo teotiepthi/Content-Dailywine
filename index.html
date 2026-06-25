@@ -25,8 +25,8 @@ header{background:var(--burg);padding:18px 28px;display:flex;align-items:center;
 .fr.s{grid-template-columns:1fr}.fr.t{grid-template-columns:1fr 1fr 1fr}
 .fg{display:flex;flex-direction:column;gap:5px}
 label{font-size:11px;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:.7px}
-select,input,textarea{font-family:'Inter',sans-serif;font-size:13.5px;padding:9px 12px;border:1.5px solid var(--bdr);border-radius:8px;background:var(--cream);color:var(--ink);transition:border-color .2s,box-shadow .2s;outline:none;width:100%}
-select:focus,input:focus,textarea:focus{border-color:var(--org);box-shadow:0 0 0 3px rgba(228,134,60,.1);background:white}
+select,input,textarea{font-family:'Inter',sans-serif;font-size:13.5px;padding:9px 12px;border:1.5px solid var(--bdr);border-radius:8px;background:var(--cream);color:var(--ink);transition:border-color .2s;outline:none;width:100%}
+select:focus,input:focus,textarea:focus{border-color:var(--org);background:white}
 textarea{resize:vertical;min-height:72px;line-height:1.5}
 .pg{display:grid;grid-template-columns:repeat(auto-fill,minmax(130px,1fr));gap:8px;margin-top:6px}
 .pc{padding:7px 10px;border:1.5px solid var(--bdr);border-radius:7px;background:var(--cream);font-size:12px;cursor:pointer;transition:all .2s;text-align:center;color:var(--ink);line-height:1.3}
@@ -36,7 +36,7 @@ textarea{resize:vertical;min-height:72px;line-height:1.5}
 .ctb{padding:5px 12px;border:1.5px solid var(--bdr);border-radius:18px;background:var(--cream);font-size:11.5px;font-weight:500;cursor:pointer;transition:all .2s;color:var(--muted)}
 .ctb:hover{border-color:var(--org);color:var(--ink)}
 .ctb.active{background:var(--burg);color:white;border-color:var(--burg)}
-.bg{width:100%;padding:15px;background:linear-gradient(135deg,var(--burg),var(--burg3));color:white;border:none;border-radius:10px;font-family:'Playfair Display',serif;font-size:16px;font-weight:600;cursor:pointer;transition:all .25s;letter-spacing:.3px}
+.bg{width:100%;padding:15px;background:linear-gradient(135deg,var(--burg),var(--burg3));color:white;border:none;border-radius:10px;font-family:'Playfair Display',serif;font-size:16px;font-weight:600;cursor:pointer;transition:all .25s}
 .bg:hover{transform:translateY(-1px);box-shadow:0 6px 18px rgba(117,36,43,.3)}
 .bg:disabled{opacity:.6;cursor:not-allowed;transform:none}
 .br{display:flex;gap:9px;margin-top:11px}
@@ -47,7 +47,7 @@ textarea{resize:vertical;min-height:72px;line-height:1.5}
 .ob{background:var(--cream);border:1.5px solid var(--bdr);border-radius:10px;padding:18px;min-height:120px;white-space:pre-wrap;font-family:'Lora',serif;font-size:14.5px;line-height:1.75;color:var(--ink)}
 .ph{color:var(--muted);font-style:italic;font-family:'Inter',sans-serif;font-size:13.5px}
 .ld::after{content:'';animation:dots 1.2s steps(3,end) infinite}
-@keyframes dots{0%{content:'.'}33%{content:'..'}66%,100%{content:'...'}}
+@keyframes dots{0%{content:'.'}33%{content:'..'} 66%,100%{content:'...'}}
 .cc{text-align:right;font-size:11px;color:var(--muted);margin-top:5px}
 .si{background:white;border:1px solid var(--bdr);border-radius:10px;padding:14px;margin-bottom:10px}
 .sm{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px}
@@ -63,12 +63,7 @@ textarea{resize:vertical;min-height:72px;line-height:1.5}
 .cl{width:34px;height:34px;background:var(--burg);color:white;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Playfair Display',serif;font-size:15px;font-weight:700;margin:0 auto 7px}
 .cw{font-size:11.5px;font-weight:600;color:var(--burg);margin-bottom:3px}
 .cd{font-size:10.5px;color:var(--muted);line-height:1.4}
-.gs{margin-bottom:22px}
-.gs h3{font-family:'Playfair Display',serif;font-size:15px;color:var(--burg);margin-bottom:9px;padding-bottom:6px;border-bottom:1px solid var(--bdr)}
-.gs p,.gs li{font-size:13.5px;line-height:1.7;color:#4a3728;margin-bottom:5px}
-.gs ul{padding-left:16px}
-.tip{background:rgba(228,134,60,.08);border-left:3px solid var(--org);padding:11px 14px;border-radius:0 8px 8px 0;margin:9px 0;font-size:13px;line-height:1.6;color:var(--ink)}
-.toast{position:fixed;bottom:22px;left:50%;transform:translateX(-50%) translateY(80px);background:var(--burg);color:white;padding:11px 22px;border-radius:28px;font-size:13.5px;font-weight:500;transition:transform .3s cubic-bezier(.34,1.56,.64,1);z-index:9999;box-shadow:0 4px 18px rgba(0,0,0,.22);opacity:0}
+.toast{position:fixed;bottom:22px;left:50%;transform:translateX(-50%) translateY(80px);background:var(--burg);color:white;padding:11px 22px;border-radius:28px;font-size:13.5px;font-weight:500;transition:transform .3s;z-index:9999;box-shadow:0 4px 18px rgba(0,0,0,.22);opacity:0}
 .toast.show{transform:translateX(-50%) translateY(0);opacity:1}
 .empty{text-align:center;padding:44px 20px;color:var(--muted)}
 @media(max-width:600px){.fr{grid-template-columns:1fr}.fr.t{grid-template-columns:1fr 1fr}.cg{grid-template-columns:repeat(2,1fr)}.main{padding:14px 12px 60px}}
@@ -89,21 +84,62 @@ textarea{resize:vertical;min-height:72px;line-height:1.5}
   <div class="card"><div class="ct">Chọn sản phẩm</div><div class="ctabs" id="ctabs"></div><div class="pg" id="pgrid"></div></div>
   <div class="card"><div class="ct">Thông tin bài viết</div>
     <div class="fr">
-      <div class="fg"><label>Mục tiêu bài viết</label><select id="goal"><option value="awareness">Tăng nhận diện thương hiệu</option><option value="engagement">Tương tác & kết nối</option><option value="sale">Thúc đẩy mua hàng</option><option value="education">Giáo dục khách hàng</option><option value="event">Sự kiện / Dịp đặc biệt</option></select></div>
-      <div class="fg"><label>Tone giọng văn</label><select id="tone"><option value="warm">Ấm áp & Gần gũi</option><option value="premium">Sang trọng & Premium</option><option value="fun">Vui vẻ & Năng động</option><option value="expert">Chuyên gia & Uy tín</option><option value="story">Kể chuyện & Cảm xúc</option></select></div>
+      <div class="fg"><label>Mục tiêu bài viết</label>
+        <select id="goal">
+          <option value="Tăng nhận diện thương hiệu">Tăng nhận diện thương hiệu</option>
+          <option value="Tương tác và kết nối">Tương tác &amp; kết nối</option>
+          <option value="Thúc đẩy mua hàng">Thúc đẩy mua hàng</option>
+          <option value="Giáo dục khách hàng">Giáo dục khách hàng</option>
+          <option value="Sự kiện dịp đặc biệt">Sự kiện / Dịp đặc biệt</option>
+        </select>
+      </div>
+      <div class="fg"><label>Tone giọng văn</label>
+        <select id="tone">
+          <option value="ấm áp gần gũi">Ấm áp &amp; Gần gũi</option>
+          <option value="sang trọng premium">Sang trọng &amp; Premium</option>
+          <option value="vui vẻ năng động">Vui vẻ &amp; Năng động</option>
+          <option value="chuyên gia uy tín">Chuyên gia &amp; Uy tín</option>
+          <option value="kể chuyện cảm xúc">Kể chuyện &amp; Cảm xúc</option>
+        </select>
+      </div>
     </div>
     <div class="fr t">
-      <div class="fg"><label>Nền tảng</label><select id="plat"><option value="facebook">Facebook</option><option value="instagram">Instagram</option><option value="tiktok">TikTok</option><option value="zalo">Zalo</option></select></div>
-      <div class="fg"><label>Độ dài</label><select id="len"><option value="short">Ngắn (50-100 chữ)</option><option value="medium" selected>Vừa (100-200 chữ)</option><option value="long">Dài (200-350 chữ)</option></select></div>
-      <div class="fg"><label>Số lượng</label><select id="cnt"><option value="1">1 caption</option><option value="3" selected>3 caption</option><option value="5">5 caption</option></select></div>
+      <div class="fg"><label>Nền tảng</label>
+        <select id="plat">
+          <option value="Facebook">Facebook</option>
+          <option value="Instagram kèm 5-8 hashtag">Instagram</option>
+          <option value="TikTok hook mạnh ngắn gọn">TikTok</option>
+          <option value="Zalo thân thiện personal">Zalo</option>
+        </select>
+      </div>
+      <div class="fg"><label>Độ dài</label>
+        <select id="len">
+          <option value="50-100 từ">Ngắn (50-100 chữ)</option>
+          <option value="100-200 từ" selected>Vừa (100-200 chữ)</option>
+          <option value="200-350 từ">Dài (200-350 chữ)</option>
+        </select>
+      </div>
+      <div class="fg"><label>Số lượng</label>
+        <select id="cnt">
+          <option value="1">1 caption</option>
+          <option value="3" selected>3 caption</option>
+          <option value="5">5 caption</option>
+        </select>
+      </div>
     </div>
-    <div class="fr s"><div class="fg"><label>Ghi chú thêm (tuỳ chọn)</label><textarea id="note" placeholder="VD: dịp Valentine, quà tặng cặp đôi..."></textarea></div></div>
+    <div class="fr s"><div class="fg"><label>Ghi chú thêm (tuỳ chọn)</label>
+      <textarea id="note" placeholder="VD: dịp Valentine, quà tặng cặp đôi..."></textarea>
+    </div></div>
   </div>
-  <button class="bg" onclick="gen()" id="genBtn">🪄 Tạo Caption ngay</button>
+  <button class="bg" id="genBtn" onclick="genCaption()">🪄 Tạo Caption ngay</button>
   <div class="card" style="margin-top:18px"><div class="ct">Kết quả</div>
-    <div class="ob" id="obox"><span class="ph">Caption sẽ xuất hiện ở đây sau khi nhấn "Tạo Caption" ✨</span></div>
-    <div class="cc" id="cc2"></div>
-    <div class="br"><button class="bs" onclick="cpO()">📋 Sao chép</button><button class="bs" onclick="gen()">🔄 Tạo lại</button><button class="bv" onclick="svO()">💾 Lưu lại</button></div>
+    <div class="ob" id="obox"><span class="ph">Caption sẽ xuất hiện ở đây sau khi nhấn &quot;Tạo Caption&quot; ✨</span></div>
+    <div class="cc" id="wc"></div>
+    <div class="br">
+      <button class="bs" onclick="cpO()">📋 Sao chép</button>
+      <button class="bs" onclick="genCaption()">🔄 Tạo lại</button>
+      <button class="bv" onclick="svO()">💾 Lưu lại</button>
+    </div>
   </div>
 </div></div>
 <div id="tab-lifestyle" class="tc"><div class="main">
@@ -119,12 +155,33 @@ textarea{resize:vertical;min-height:72px;line-height:1.5}
   </div>
   <div class="card"><div class="ct">Tạo Caption Lifestyle</div>
     <div class="fr">
-      <div class="fg"><label>Dịp / Bối cảnh</label><select id="lsocc"><option value="dinner">Bữa tối lãng mạn</option><option value="friends">Tụ họp bạn bè</option><option value="weekend">Thư giãn cuối tuần</option><option value="gift">Quà tặng ý nghĩa</option><option value="achievement">Kỷ niệm thành công</option><option value="travel">Hành trình khám phá</option><option value="self">Me time</option></select></div>
-      <div class="fg"><label>Cảm xúc chủ đạo</label><select id="lsemo"><option value="romantic">Lãng mạn, ấm áp</option><option value="joyful">Vui vẻ, phấn khởi</option><option value="nostalgic">Hoài niệm, sâu lắng</option><option value="luxurious">Sang trọng, tự hào</option><option value="cozy">Bình yên, thư giãn</option></select></div>
+      <div class="fg"><label>Dịp / Bối cảnh</label>
+        <select id="lsocc">
+          <option value="bữa tối lãng mạn">Bữa tối lãng mạn</option>
+          <option value="tụ họ p bạn bè">Tụ họ p bạn bè</option>
+          <option value="thư giãn cuối tuần">Thư giãn cuối tuần</option>
+          <option value="tặng quà ý nghĩa">Quà tặng ý nghĩa</option>
+          <option value="kỷ niệm thành công">Kỷ niệm thành công</option>
+          <option value="hành trình khám phá">Hành trình khám phá</option>
+          <option value="me time">Me time</option>
+        </select>
+      </div>
+      <div class="fg"><label>Cảm xúc chủ đạo</label>
+        <select id="lsemo">
+          <option value="lãng mạn ấm áp">Lãng mạn, ấm áp</option>
+          <option value="vui vẻ phấn khởi">Vui vẻ, phấn khởi</option>
+          <option value="hoài niệm sâu lắng">Hoài niệm, sâu lắng</option>
+          <option value="sang trọng tự hào">Sang trọng, tự hào</option>
+          <option value="bình yên thư giãn">Bình yên, thư giãn</option>
+        </select>
+      </div>
     </div>
-    <div class="fr s"><div class="fg"><label>Sản phẩm lồng ghép (tuỳ chọn)</label><input type="text" id="lsprod" placeholder="VD: San Simone Prosecco, hoặc để trống"></div></div>
-    <button class="bg" onclick="genL()">🍷 Tạo Caption Lifestyle</button>
-    <div style="margin-top:14px"><div class="ob" id="lsbox"><span class="ph">Caption lifestyle sẽ xuất hiện ở đây ✨</span></div>
+    <div class="fr s"><div class="fg"><label>Sản phẩm lồng ghép (tuỳ chọn)</label>
+      <input type="text" id="lsprod" placeholder="VD: San Simone Prosecco, hoặc để trống">
+    </div></div>
+    <button class="bg" onclick="genLS()">🍷 Tạo Caption Lifestyle</button>
+    <div style="margin-top:14px">
+      <div class="ob" id="lsbox"><span class="ph">Caption lifestyle sẽ xuất hiện ở đây ✨</span></div>
       <div class="br"><button class="bs" onclick="cpL()">📋 Sao chép</button><button class="bv" onclick="svL()">💾 Lưu lại</button></div>
     </div>
   </div>
@@ -137,61 +194,144 @@ textarea{resize:vertical;min-height:72px;line-height:1.5}
   <div id="slist"></div>
 </div></div>
 <div id="tab-guide" class="tc"><div class="main">
-  <div class="gs"><h3>🎯 Cách sử dụng</h3><p>Chọn sản phẩm → điền thông tin → bấm "Tạo Caption". Tự động hoạt động, không cần cấu hình gì.</p><div class="tip">💡 Thêm ghi chú cụ thể để caption ra đúng ý hơn!</div></div>
-  <div class="gs"><h3>🍷 Sản phẩm Daily Wine</h3><ul><li><strong>San Simone Prosecco</strong> — Champagne Ý, bong bóng nhẹ</li><li><strong>Papale Primitivo</strong> — Vang đỏ đậm Puglia, hậu vị dài</li><li><strong>Aussie Legacy 1868 Shiraz</strong> — Shiraz Úc mượt mà, dễ uống</li></ul></div>
-  <div class="gs"><h3>📝 Quy tắc vàng</h3><ul><li>Bán trải nghiệm, không bán rượu trực tiếp</li><li>Dùng ngôn ngữ cảm giác, không kỹ thuật</li><li>Luôn có call-to-action cuối bài</li></ul><div class="tip">🍾 Formula: Bối cảnh → Cảm xúc → Sản phẩm → CTA</div></div>
-  <div class="gs"><h3>⚡ Phím tắt</h3><ul><li><strong>Ctrl+Enter</strong> — Tạo caption nhanh</li></ul></div>
+  <div style="margin-bottom:22px"><h3 style="font-family:'Playfair Display',serif;font-size:15px;color:var(--burg);margin-bottom:9px;padding-bottom:6px;border-bottom:1px solid var(--bdr)">🎯 Cách sử dụng</h3><p style="font-size:13.5px;line-height:1.7;color:#4a3728">Chọn sản phẩm → điền thông tin → bấm &quot;Tạo Caption&quot;. Tool tự động hoạt động, không cần cấu hình gì thêm.</p></div>
+  <div style="margin-bottom:22px"><h3 style="font-family:'Playfair Display',serif;font-size:15px;color:var(--burg);margin-bottom:9px;padding-bottom:6px;border-bottom:1px solid var(--bdr)">📝 Quy tắc vàng</h3><ul style="font-size:13.5px;line-height:1.7;color:#4a3728;padding-left:16px"><li>Bán trải nghiệm, không bán rượu trực tiếp</li><li>Dùng ngôn ngữ cảm giác, không kỹ thuật</li><li>Luôn có call-to-action cuối bài</li></ul></div>
+  <div><h3 style="font-family:'Playfair Display',serif;font-size:15px;color:var(--burg);margin-bottom:9px;padding-bottom:6px;border-bottom:1px solid var(--bdr)">⚡ Phím tắt</h3><p style="font-size:13.5px;color:#4a3728"><strong>Ctrl+Enter</strong> — Tạo caption nhanh</p></div>
 </div></div>
 <div class="toast" id="toast"></div>
 <script>
-const WORKER='https://fragrant-dream-7128.teotiepthi.workers.dev';
-const P={"🇮🇹 Ý":["San Simone Prosecco DOC","Papale Primitivo di Manduria","Papale Oro Primitivo","Tenuta Ulisse Pecorino","Villa Antinori Rosso"],"🇫🇷 Pháp":["Chateau Roubine Rose","Louis Jadot Macon-Villages","Cotes du Rhone Rouge","Bordeaux Superieur","Muscadet Sevre et Maine"],"🇦🇺 Úc":["Aussie Legacy 1868 Shiraz","Penfolds Koonunga Hill","Wolf Blass Yellow Label","Hardys Stamp Shiraz","Jacob's Creek Chardonnay"],"🇪🇸 TBN":["Campo Viejo Rioja Reserva","Marques de Riscal Rioja","Alamos Malbec","Torres Sangre de Toro","Protos Ribera del Duero"],"🇺🇸 Mỹ":["Apothic Red Blend","Ménage à Trois Silk","Josh Cellars Cabernet","Meiomi Pinot Noir","Bogle Phantom Red"],"🇨🇱 Chile":["Concha y Toro Casillero Diablo","Santa Rita 120 Cabernet","Montes Alpha Merlot","Viu Manent Malbec","Santa Carolina Reserva"],"🇦🇷 AR":["Achaval Ferrer Malbec","Catena Zapata Adrianna","Zuccardi Valle de Uco","Clos de los Siete","Renacer Punto Final"],"🇳🇿 NZ":["Cloudy Bay Sauvignon Blanc","Kim Crawford Sauvignon","Villa Maria Pinot Noir","Palliser Estate Riesling","Greywacke Wild Sauvignon"]};
-let sC=Object.keys(P)[0],sP='',cO='',cL='';
-function init(){rC();rP();rS();}
-function rC(){document.getElementById('ctabs').innerHTML=Object.keys(P).map(c=>`<button class="ctb ${c===sC?'active':''}" onclick="selC('${c}')">${c}</button>`).join('');}
-function selC(c){sC=c;sP='';rC();rP();}
-function rP(){document.getElementById('pgrid').innerHTML=(P[sC]||[]).map(p=>`<div class="pc ${p===sP?'sel':''}" onclick="selP('${p}')">${p}</div>`).join('');}
-function selP(p){sP=sP===p?'':p;rP();}
-function sw(id,btn){document.querySelectorAll('.tc').forEach(t=>t.classList.remove('active'));document.querySelectorAll('.tb').forEach(b=>b.classList.remove('active'));document.getElementById('tab-'+id).classList.add('active');btn.classList.add('active');if(id==='saved')rS();}
-function strip(s){return(s||'').replace(/**([sS]*?)**/g,'$1').replace(/*([sS]*?)*/g,'$1').replace(/^#{1,6}s+/gm,'').trim();}
-async function api(prompt,max){
-  const r=await fetch(WORKER,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({model:'claude-sonnet-4-6',max_tokens:max||1500,messages:[{role:'user',content:prompt}]})});
-  if(!r.ok){const e=await r.json();throw new Error(e.error?.message||'HTTP '+r.status);}
-  return(await r.json()).content?.[0]?.text||'';
+var WORKER = 'https://fragrant-dream-7128.teotiepthi.workers.dev';
+var P = {
+  "🇮🇹 Ý": ["San Simone Prosecco DOC","Papale Primitivo di Manduria","Papale Oro Primitivo","Tenuta Ulisse Pecorino","Villa Antinori Rosso"],
+  "🇫🇷 Pháp": ["Chateau Roubine Rose","Louis Jadot Macon-Villages","Cotes du Rhone Rouge","Bordeaux Superieur","Muscadet Sevre et Maine"],
+  "🇦🇺 Úc": ["Aussie Legacy 1868 Shiraz","Penfolds Koonunga Hill","Wolf Blass Yellow Label","Hardys Stamp Shiraz","Jacob's Creek Chardonnay"],
+  "🇪🇸 TBN": ["Campo Viejo Rioja Reserva","Marques de Riscal Rioja","Alamos Malbec","Torres Sangre de Toro","Protos Ribera del Duero"],
+  "🇺🇸 Mỹ": ["Apothic Red Blend","Menage a Trois Silk","Josh Cellars Cabernet","Meiomi Pinot Noir","Bogle Phantom Red"],
+  "🇨🇱 Chile": ["Concha y Toro Casillero Diablo","Santa Rita 120 Cabernet","Montes Alpha Merlot","Viu Manent Malbec","Santa Carolina Reserva"],
+  "🇦🇷 AR": ["Achaval Ferrer Malbec","Catena Zapata Adrianna","Zuccardi Valle de Uco","Clos de los Siete","Renacer Punto Final"],
+  "🇳🇿 NZ": ["Cloudy Bay Sauvignon Blanc","Kim Crawford Sauvignon","Villa Maria Pinot Noir","Palliser Estate Riesling","Greywacke Wild Sauvignon"]
+};
+var sC = Object.keys(P)[0], sP = '', cO = '', cL = '';
+function init() { rC(); rP(); rS(); }
+function rC() {
+  document.getElementById('ctabs').innerHTML = Object.keys(P).map(function(c) {
+    return '<button class="ctb ' + (c===sC?'active':'') + '" onclick="selC(\''+ c +'\')">' + c + '</button>';
+  }).join('');
 }
-async function gen(){
-  const g=document.getElementById('goal').value,t=document.getElementById('tone').value,pl=document.getElementById('plat').value,l=document.getElementById('len').value,c=document.getElementById('cnt').value,n=document.getElementById('note').value,pr=sP||'sản phẩm rượu Daily Wine';
-  const lM={short:'50-100 từ',medium:'100-200 từ',long:'200-350 từ'};
-  const tM={warm:'ấm áp, gần gũi',premium:'sang trọng, premium',fun:'vui vẻ, năng động',expert:'chuyên gia, uy tín',story:'kể chuyện, cảm xúc'};
-  const gM={awareness:'tăng nhận diện thương hiệu',engagement:'tăng tương tác & kết nối',sale:'thúc đẩy mua hàng',education:'giáo dục kiến thức rượu',event:'quảng bá sự kiện/dịp đặc biệt'};
-  const pM={facebook:'Facebook',instagram:'Instagram (kèm 5-8 hashtag)',tiktok:'TikTok (hook mạnh, ngắn gọn)',zalo:'Zalo (thân thiện, personal)'};
-  const p=`Bạn là chuyên gia copywriting cho thương hiệu rượu Daily Wine Việt Nam.\n\nViết ${c} caption (đánh số 1., 2., 3.) với:\n- Sản phẩm: ${pr}\n- Mục tiêu: ${gM[g]}\n- Tone: ${tM[t]}\n- Nền tảng: ${pM[pl]}\n- Độ dài: ${lM[l]}\n${n?'- Yêu cầu thêm: '+n:''}\n\nQuy tắc:\n- KHÔNG nói thẳng "uống rượu", tập trung vào trải nghiệm\n- Cuối mỗi caption có CTA tự nhiên\n- Viết Tiếng Việt tự nhiên, có thể dùng emoji\n\nChỉ xuất caption, không giải thích.`;
-  setL(true,'genBtn','obox');
-  try{cO=strip(await api(p));document.getElementById('obox').textContent=cO;document.getElementById('cc2').textContent=cO.length+' ký tự';}
-  catch(e){document.getElementById('obox').textContent='❌ Lỗi: '+e.message;}
-  setL(false,'genBtn','obox');
+function selC(c) { sC = c; sP = ''; rC(); rP(); }
+function rP() {
+  document.getElementById('pgrid').innerHTML = (P[sC]||[]).map(function(p) {
+    return '<div class="pc ' + (p===sP?'sel':'') + '" onclick="selP(\''+ p.replace(/\\/g,'\\\\').replace(/\'/g,\'\\\'')+'\')">' + p + '</div>';
+  }).join('');
 }
-async function genL(){
-  const oM={dinner:'bữa tối lãng mạn',friends:'tụ họp bạn bè',weekend:'thư giãn cuối tuần',gift:'tặng quà ý nghĩa',achievement:'kỷ niệm thành công',travel:'hành trình khám phá',self:'me time'};
-  const eM={romantic:'lãng mạn, ấm áp',joyful:'vui vẻ, phấn khởi',nostalgic:'hoài niệm, sâu lắng',luxurious:'sang trọng, tự hào',cozy:'bình yên, thư giãn'};
-  const oc=document.getElementById('lsocc').value,em=document.getElementById('lsemo').value,pr=document.getElementById('lsprod').value;
-  const p=`Bạn là content creator lifestyle cao cấp.\nViết 1 caption lifestyle theo C.R.E.A.T.E:\n- Bối cảnh: ${oM[oc]}\n- Cảm xúc: ${eM[em]}\n${pr?'- Lồng ghép tự nhiên: '+pr:'- Chỉ gợi ý "một ly rượu" hoặc wine'}\nPhong cách: tinh tế, như người sống chất lượng cao tự viết.\nĐộ dài: 150-250 từ. Có emoji & hashtag cuối bài. Viết Tiếng Việt.`;
-  setL(true,null,'lsbox');
-  try{cL=strip(await api(p,800));document.getElementById('lsbox').textContent=cL;}
-  catch(e){document.getElementById('lsbox').textContent='❌ Lỗi: '+e.message;}
-  setL(false,null,'lsbox');
+function selP(p) { sP = (sP===p ? '' : p); rP(); }
+function sw(id, btn) {
+  document.querySelectorAll('.tc').forEach(function(t){ t.classList.remove('active'); });
+  document.querySelectorAll('.tb').forEach(function(b){ b.classList.remove('active'); });
+  document.getElementById('tab-'+id).classList.add('active');
+  btn.classList.add('active');
+  if(id==='saved') rS();
 }
-function setL(on,btn,box){const b=document.getElementById(box);if(on){b.innerHTML='<span class="ld">Đang tạo caption</span>';if(btn)document.getElementById(btn).disabled=true;}else{if(btn)document.getElementById(btn).disabled=false;}}
-function cpO(){if(cO)navigator.clipboard.writeText(cO).then(()=>toast('✅ Đã sao chép!'));}
-function cpL(){if(cL)navigator.clipboard.writeText(cL).then(()=>toast('✅ Đã sao chép!'));}
-function svO(){if(!cO)return;sv(cO,sP||'Daily Wine');toast('💾 Đã lưu!');}
-function svL(){if(!cL)return;sv(cL,'Lifestyle');toast('💾 Đã lưu!');}
-function sv(tx,lb){const s=JSON.parse(localStorage.getItem('dw')||'[]');s.unshift({id:Date.now(),tx,lb,dt:new Date().toLocaleDateString('vi-VN')});if(s.length>50)s.pop();localStorage.setItem('dw',JSON.stringify(s));}
-function rS(){const s=JSON.parse(localStorage.getItem('dw')||'[]'),el=document.getElementById('slist');if(!s.length){el.innerHTML='<div class="empty"><p>Chưa có caption nào. Tạo và bấm Lưu lại.</p></div>';return;}el.innerHTML=s.map(x=>`<div class="si"><div class="sm"><span class="stag">${x.lb}</span><span class="sd">${x.dt}</span></div><div class="st">${x.tx}</div><div class="sa"><button class="bi" onclick="navigator.clipboard.writeText(this.closest('.si').querySelector('.st').textContent).then(()=>toast('✅ Đã sao chép!'))">📋 Sao chép</button><button class="bi d" onclick="dl(${x.id})">🗑️ Xoá</button></div></div>`).join('');}
-function dl(id){let s=JSON.parse(localStorage.getItem('dw')||'[]');s=s.filter(x=>x.id!==id);localStorage.setItem('dw',JSON.stringify(s));rS();toast('🗑️ Đã xoá');}
-function clrAll(){if(!confirm('Xoá tất cả?'))return;localStorage.removeItem('dw');rS();toast('🗑️ Đã xoá tất cả');}
-function toast(m){const t=document.getElementById('toast');t.textContent=m;t.classList.add('show');setTimeout(()=>t.classList.remove('show'),2500);}
-document.addEventListener('keydown',e=>{if(e.ctrlKey&&e.key==='Enter')gen();});
+function strip(s) { return (s||'').replace(/\*\*([\s\S]*?)\*\*/g,'$1').replace(/\*([\s\S]*?)\*/g,'$1').replace(/^#{1,6}\s+/gm,'').trim(); }
+async function callWorker(prompt, maxTok) {
+  var r = await fetch(WORKER, {method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({messages:[{role:'user',content:prompt}],max_tokens:maxTok||1500})});
+  if(!r.ok) { var e = await r.json(); throw new Error(e.error&&e.error.message?e.error.message:'HTTP '+r.status); }
+  var d = await r.json();
+  return d.content && d.content[0] ? d.content[0].text : '';
+}
+function setL(on, btnId, boxId) {
+  var box = document.getElementById(boxId);
+  if(on) { box.innerHTML = '<span class="ld">Đang tạo caption</span>'; if(btnId) document.getElementById(btnId).disabled = true; }
+  else { if(btnId) document.getElementById(btnId).disabled = false; }
+}
+async function genCaption() {
+  var goal = document.getElementById('goal').value;
+  var tone = document.getElementById('tone').value;
+  var plat = document.getElementById('plat').value;
+  var len  = document.getElementById('len').value;
+  var cnt  = document.getElementById('cnt').value;
+  var note = document.getElementById('note').value;
+  var prod = sP || 'sản phẩm rượu Daily Wine';
+  var prompt = 'Bạn là chuyên gia copywriting cho thương hiệu rượu Daily Wine Việt Nam.\n\n'
+    + 'Viết ' + cnt + ' caption (đánh số 1., 2., 3.) với:\n'
+    + '- Sản phẩm: ' + prod + '\n'
+    + '- Mục tiêu: ' + goal + '\n'
+    + '- Tone: ' + tone + '\n'
+    + '- Nền tảng: ' + plat + '\n'
+    + '- Độ dài: ' + len + '\n'
+    + (note ? '- Yêu cầu thêm: ' + note + '\n' : '')
+    + '\nQuy tắc:\n- KHÔNG nói thẳng "uống rượu", tập trung vào trải nghiệm\n'
+    + '- Cuối mỗi caption có CTA tự nhiên\n'
+    + '- Viết Tiếng Việt tự nhiên, không dùng markdown\n\nChỉ xuất caption, không giải thích.';
+  setL(true, 'genBtn', 'obox');
+  try {
+    cO = strip(await callWorker(prompt, 1500));
+    document.getElementById('obox').textContent = cO;
+    document.getElementById('wc').textContent = cO.length + ' ký tự';
+  } catch(e) {
+    document.getElementById('obox').textContent = '❌ Lỗi: ' + e.message;
+  }
+  setL(false, 'genBtn', 'obox');
+}
+async function genLS() {
+  var occ  = document.getElementById('lsocc').value;
+  var emo  = document.getElementById('lsemo').value;
+  var prod = document.getElementById('lsprod').value;
+  var prompt = 'Bạn là content creator lifestyle cao cấp.\n'
+    + 'Viết 1 caption lifestyle theo C.R.E.A.T.E:\n'
+    + '- Bối cảnh: ' + occ + '\n'
+    + '- Cảm xúc: ' + emo + '\n'
+    + (prod ? '- Lồng ghép tự nhiên: ' + prod : '- Chỉ gợi ý "một ly rượu" hoặc wine') + '\n'
+    + 'Phong cách: tinh tế, như người sống chất lượng cao tự viết.\n'
+    + 'Độ dài: 150-250 từ. Có emoji và hashtag cuối bài. Viết Tiếng Việt. Không dùng markdown.';
+  setL(true, null, 'lsbox');
+  try {
+    cL = strip(await callWorker(prompt, 800));
+    document.getElementById('lsbox').textContent = cL;
+  } catch(e) {
+    document.getElementById('lsbox').textContent = '❌ Lỗi: ' + e.message;
+  }
+  setL(false, null, 'lsbox');
+}
+function cpO() { if(cO) navigator.clipboard.writeText(cO).then(function(){ toast('✅ Đã sao chép!'); }); }
+function cpL() { if(cL) navigator.clipboard.writeText(cL).then(function(){ toast('✅ Đã sao chép!'); }); }
+function svO() { if(!cO) return; save(cO, sP||'Đài ly Wine'); toast('💾 Đã lưu!'); }
+function svL() { if(!cL) return; save(cL, 'Lifestyle'); toast('💾 Đã lưu!'); }
+function save(text, label) {
+  var s = JSON.parse(localStorage.getItem('dw')||'[]');
+  s.unshift({id:Date.now(),text:text,label:label,date:new Date().toLocaleDateString('vi-VN')});
+  if(s.length>50) s.pop();
+  localStorage.setItem('dw', JSON.stringify(s));
+}
+function rS() {
+  var s = JSON.parse(localStorage.getItem('dw')||'[]');
+  var el = document.getElementById('slist');
+  if(!s.length) { el.innerHTML = '<div class="empty"><p>Chưa có caption nào. Tạo và bấm "Lưu lại" để lưu.</p></div>'; return; }
+  el.innerHTML = s.map(function(x) {
+    return '<div class="si"><div class="sm"><span class="stag">'+x.label+'</span><span class="sd">'+x.date+'</span></div>'
+      + '<div class="st">'+x.text+'</div>'
+      + '<div class="sa"><button class="bi" onclick="cpTxt(this)">📋 Sao chép</button>'
+      + '<button class="bi d" onclick="del('+x.id+')">🗑️ Xoá</button></div></div>';
+  }).join('');
+}
+function cpTxt(btn) {
+  var txt = btn.closest('.si').querySelector('.st').textContent;
+  navigator.clipboard.writeText(txt).then(function(){ toast('✅ Đã sao chép!'); });
+}
+function del(id) {
+  var s = JSON.parse(localStorage.getItem('dw')||'[]').filter(function(x){ return x.id!==id; });
+  localStorage.setItem('dw', JSON.stringify(s)); rS(); toast('🗑️ Đã xoá');
+}
+function clrAll() {
+  if(!confirm('Xoá tất cả?')) return;
+  localStorage.removeItem('dw'); rS(); toast('🗑️ Đã xoá tất cả');
+}
+function toast(m) {
+  var t = document.getElementById('toast');
+  t.textContent = m; t.classList.add('show');
+  setTimeout(function(){ t.classList.remove('show'); }, 2500);
+}
+document.addEventListener('keydown', function(e){ if(e.ctrlKey && e.key==='Enter') genCaption(); });
 init();
 </script>
 </body>
