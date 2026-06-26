@@ -214,24 +214,21 @@ var P = {
 var sC = Object.keys(P)[0], sP = '', cO = '', cL = '';
 function init() { rC(); rP(); rS(); }
 function rC() {
-  document.getElementById('ctabs').innerHTML = Object.keys(P).map(function(c) {
-    return '<button class="ctb ' + (c===sC?'active':'') + '" onclick="selC(\''+ c +'\')">' + c + '</button>';
+  var keys = Object.keys(P);
+  document.getElementById('ctabs').innerHTML = keys.map(function(c, i) {
+    return '<button class="ctb ' + (c===sC?'active':'') + '" onclick="selCI(' + i + ')">' + c + '</button>';
   }).join('');
 }
+function selCI(i) { selC(Object.keys(P)[i]); }
 function selC(c) { sC = c; sP = ''; rC(); rP(); }
 function rP() {
-  document.getElementById('pgrid').innerHTML = (P[sC]||[]).map(function(p) {
-    return '<div class="pc ' + (p===sP?'sel':'') + '" onclick="selP(\''+ p.replace(/\\/g,'\\\\').replace(/\'/g,\'\\\'')+'\')">' + p + '</div>';
+  document.getElementById('pgrid').innerHTML = (P[sC]||[]).map(function(p, i) {
+    return '<div class="pc ' + (p===sP?'sel':'') + '" onclick="selPI(' + i + ')">' + p + '</div>';
   }).join('');
 }
+function selPI(i) { selP((P[sC]||[])[i]||''); }
 function selP(p) { sP = (sP===p ? '' : p); rP(); }
-function sw(id, btn) {
-  document.querySelectorAll('.tc').forEach(function(t){ t.classList.remove('active'); });
-  document.querySelectorAll('.tb').forEach(function(b){ b.classList.remove('active'); });
-  document.getElementById('tab-'+id).classList.add('active');
-  btn.classList.add('active');
-  if(id==='saved') rS();
-}
+
 function strip(s) { return (s||'').replace(/\*\*([\s\S]*?)\*\*/g,'$1').replace(/\*([\s\S]*?)\*/g,'$1').replace(/^#{1,6}\s+/gm,'').trim(); }
 async function callWorker(prompt, maxTok) {
   var r = await fetch(WORKER, {method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({messages:[{role:'user',content:prompt}],max_tokens:maxTok||1500})});
